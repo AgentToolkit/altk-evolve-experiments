@@ -1,0 +1,29 @@
+# Defaults for eval_tau2.py (the [eval] table). Command-line flags override
+# these; eval.sh additionally passes --llm-agent from $TAU2_LLM_AGENT and
+# --llm-user from $TAU2_LLM_USER, which override any value set here. Keys must
+# match eval_tau2._DEFAULTS.
+#
+# Secrets and model wiring come from the environment (see eval.sh + tau2.env),
+# never from this file.
+
+[eval]
+domain          = "retail"
+split           = "test"     # tau2 task split: train | test | base (all). "none"/"all" = no split filter.
+# num_tasks     = 5          # first N tasks of the split (smoke); omit to run the whole split
+num_trials      = 1          # >1 enables pass^k
+max_concurrency = 8          # concurrent simulations. The native ReAct agent has no
+                             # per-round event-loop contention, so tau2's runner
+                             # parallelises cleanly. Lower it if the proxy returns
+                             # transient errors.
+max_steps       = 200        # tau2 default; lower only for quick smoke runs
+seed            = 42
+# runs_dir      = "runs"     # base dir for results; default <repo>/runs. Results
+                             # go to <runs_dir>/<run_name>/results.json (in THIS
+                             # repo, not tau2-bench/data).
+
+# --- Guidelines / playbook injection into the ReAct system prompt ---
+guidelines_type = "lossless"          # lossless | sup2 | sup3
+# playbook      = "benchmarks/tau2/playbooks/retail.json"   # none ships yet; built later
+# no_domain_policy = false            # true = do NOT inject tau2's domain policy
+
+log_level       = "INFO"

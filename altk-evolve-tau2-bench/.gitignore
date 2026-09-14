@@ -1,0 +1,21 @@
+# Simulation results / run artifacts (written by eval_tau2.py)
+# Ignore everything under runs/ except the committed reference run.
+/runs/*
+!/runs/react_retail_base_lossless/
+
+# Log files
+/logs/
+*.log
+
+# Submission prep artifacts (regenerable trajectories + metadata)
+/submission_prep/
+
+# macOS
+.DS_Store
+
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/

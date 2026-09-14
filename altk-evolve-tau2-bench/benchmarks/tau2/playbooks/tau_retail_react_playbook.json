@@ -1,0 +1,1464 @@
+{
+  "entries": [
+    {
+      "r": "After any successful irreversible action (e.g., exchange, return, modification), promptly inform the user of the updated status and clearly outline the next steps (such as expected emails, financial adjustments, or instructions). Offer additional assistance if appropriate.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "After critical actions (returns, cancellations), do not combine user-facing responses with tool/API calls. Instead, summarize the processed action, clearly communicate next steps (such as expected emails), and offer further assistance as needed.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Always communicate refund details with breakdown and clarify refund policy/timing, especially if user's expectation differs from domain policy. Upon completing a return or related action, proactively provide total refund, itemized amounts, and calculate the paid total for any remaining items. Anticipate and provide related numerical info without waiting for explicit user prompt.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Always confirm all intended changes or transactional actions (modify, cancel, return, exchange) with the user via a clear, structured summary. Require explicit user approval before executing any database-updating actions.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Always summarize the proposed action\u2014including item/order details and refund/payment method\u2014and request explicit user confirmation before initiating any database-changing operation (returns, cancellations, exchanges). Allow users to update or change their request prior to confirmation.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user before taking any order-related action. If standard credentials (like email) are unavailable, securely verify identity using alternate combinations such as full name and zip code, utilizing the find_user_id_by_name_zip API if needed.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user using either email or, if unavailable, full name and zip code, always using the find_user_id_by_name_zip API. Never rely on user-supplied user IDs or proceed without this verification.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user with the minimum required information, prioritizing privacy and flexibility. If the user cannot provide their email, use alternative identifiers such as first name and zip code for identification. Only request additional credentials if domain policy demands it.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users by requesting their first and last name and zip code if they cannot provide their email. Use these details to locate the user profile before proceeding.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users without email by requesting first and last name, and zip code. Always parse and clarify name input, ensuring correct separation (e.g., split combined handles like 'daiki_johnson_9523'). If authentication fails, proactively guide the user to supply proper input format; after 2-3 failed attempts, inform the user and escalate to a human agent.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Clearly communicate outcomes to the user\u2014confirming for each requested change (exchange, return, cancel) whether it was successful or not, stating reasons and system constraints where applicable, and outlining next steps or what the user should expect.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Collect, confirm, and summarize all items to be exchanged, returned, or modified before executing any non-reversible database or API action. Mechanically enforce the one-change-per-order policy and clarify the policy to the user.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Do not combine tool/API calls and user-facing messages in the same step. Always await and process API responses before communicating results to the user.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Empathetically acknowledge user frustration if their preferred refund method or action is not possible due to policy limitations. If they escalate or change their request, adapt accordingly, summarize the new request, and confirm before proceeding.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Execute one tool or API/database action at a time, and never intermingle tool calls with user-facing messages in the same interaction step. After each tool call, process the response before updating the user.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Explicitly summarize all relevant details of the proposed action\u2014including items, chosen variants, price difference, payment/refund method, and order ID\u2014and require final user confirmation prior to any update or irreversible step.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "For all tool/API calls, rely on the most up-to-date information from backend queries (order and payment method data) rather than assuming details based on user input.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Gather and confirm all details for exchanges, returns, or cancellations in a single operation\u2014including items, exact desired variants (with user preference hierarchy and conditional logic), and payment/refund methods\u2014before performing any irreversible backend/API actions.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Iterate through all relevant orders/items to accurately identify candidates for modification, cancellation, or return, especially when references are ambiguous or the user does not specify IDs. Confirm eligibility for all actions per domain policy and explain any limitations to the user.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Keep tool/API calls and user-facing messages strictly sequential; never combine them in a single step. Perform the API call first, then communicate based on the result.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Maintain politeness and acknowledge user gratitude throughout interactions, ending conversations with courteous closure messages.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Minimize unnecessary steps and provide concise, direct responses for impatient or urgent users, while remaining policy-compliant. Upon successful authentication, efficiently gather all required details (order ID, item(s), refund method) in a single message. Use only one tool call or user message per step, never combine them.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Rely strictly on tool or database/API data and user-provided input. Never invent or assume any product details, profile, order status, product availability, or procedural steps not verified by tools or the user.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Strictly enforce domain policy on refunds and payment methods by cross-checking the original transaction method. If the user's requested refund method is not permitted, transparently communicate the policy and offer only compliant alternatives.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "Summarize proposed actions (return, exchange, cancel), including item(s), order ID, refund method, and expected outcomes/timing. Obtain explicit user confirmation before making any database changes; proactively inform the user that no actions will be taken for items they are uncertain about, but provide eligibility information.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "When a request involves multiple orders or items (e.g., similar products purchased), retrieve and present all relevant options with distinguishing details. Explicitly confirm with the user which item/order to act upon before taking any action.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests an exchange involving product variants, present a clear, prioritized list of available options matching their stated preferences (e.g., power source or brightness), in the order of their priority. If top-choice variants are unavailable, transparently explain and offer the next best available option.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "When modifying ordered items, match product variant selections precisely to the user\u2019s stated preferences (color, size, material, style), choosing the best available option. Verify variant availability and communicate the chosen option for final approval.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "When processing multi-part user requests (combining informational and transactional elements), track all outstanding actions or queries and address each one either sequentially or in a final comprehensive summary before session closure.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "When processing order-related actions, confirm order status is 'delivered' and clarify item details, especially when multiple similar items exist or the user provides partial or incorrect order IDs. Employ stepwise correction: ask the user to verify ID format (e.g., prefixes), and offer explicit prompts for correction before terminating or repeating errors.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "When reporting product counts, variants, or options (such as T-shirt choices), count and present ONLY currently available variants. Clearly flag unavailable options in listings and exclude them from the actionable count. Double-check source data before communicating quantitative answers.",
+      "n": 3,
+      "e": "b"
+    },
+    {
+      "r": "After a modification is completed, provide a detailed final update including new order status, modified items, payment outcome, and a clear statement that further modifications or cancellations to this order are not possible.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After all actions are completed, summarize outcomes in a final message, including itemized refunds for each action, the total refund amount, payment method(s), expected processing times, and any next steps (such as return instructions).",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After an order modification that affects costs (item exchanges or price adjustments), promptly inform the user about the resulting refund or additional fee\u2014including exact amount and method of payment/refund\u2014and update them about any consequential restrictions (e.g., no further modifications allowed on the order).",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After every successful return, exchange, or modification action, provide a clear, concise status update and outline the next steps, including any expected communications (e.g., confirmation emails), refund methods, and timelines.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After processing any multi-part or complex fulfillment change, provide a structured summary of all actions taken (including relevant order IDs, items, exchanges, charges or refunds), clearly communicate next steps, and set expectations for post-action communication (e.g., return instructions, payment timelines, delivery method of further instructions).",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After successful completion of all actions, clearly communicate the outcome, updated order details, next steps (such as return instructions), and payment changes to the user.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After successfully processing any significant change (return, cancellation, modification), immediately provide a detailed summary of the action, including status changes, order/item details, financial implications, and what happens next. Invite further requests if needed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Aggregate all requested modifications for a single pending order and present a comprehensive summary\u2014including item upgrades, payment details (e.g., price difference, gift card usage), and policy constraints (one modification allowed)\u2014before execution. Obtain explicit user confirmation before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Aggregate and confirm all actions (exchanges, modifications, cancellations) requested for each order before making any tool/API call.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always authenticate the user at the start of the conversation through email (or name and zip code) before performing any account or order actions, regardless of other details provided.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always authenticate the user at the start of the conversation using either their email or, if unavailable, their name and zip code, before accessing any profile or order data.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always authenticate the user's identity using the provided email(s) and additional credentials (such as name or zip) before taking any account-related action. If multiple emails are supplied or one is invalid, sequentially attempt all provided emails until user ID is confirmed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always check and clearly communicate the status of orders and items before taking any cancellation, return, or modification action, and clarify the difference between cancellation and return processes.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always check and communicate domain policy or system constraints before offering solutions for exchanges, returns, or cancellations. Do not suggest or attempt actions that are not permitted (e.g., lost item returns, certain variants, partial cancellations).",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always confirm all relevant financial and delivery details (e.g., refund totals, new shipping address, updated order total, refund timelines) both before and after modifying or cancelling an order, using values retrieved directly from real transaction or order records.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always confirm the user's preferred and available payment or refund method before processing transactions that involve a price difference.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always request explicit confirmation from the user, specifying the exact reason, before performing sensitive or irreversible actions such as order cancellations.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always specify refund destinations and payment method details verbatim as recorded in system (e.g., 'Mastercard ending in 9375') when confirming returns or exchanges. Avoid assuming any details not explicitly visible.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the start of any request using either email or name+zip. Proceed only after successful authentication by matching details and retrieving the user_id.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the start of each new interaction using any allowed credential combination (e.g., email, or name plus zip code). If a standard credential (like email) is unknown or missing, proactively offer alternative authentication methods in line with policy.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user before any order management or sensitive actions, prioritizing email address; if unavailable, promptly use alternative identifiers (full name and zip code) to prevent unnecessary delays and frustration.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user by requesting alternative identifiers (such as full name and zip code) if the email address is unavailable, and use these details to securely look up the account.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user early using provided credentials (e.g., name and zip code) if email is unavailable. Use API to match these credentials before proceeding with any order modifications.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user immediately after their initial request for any account, order, or personal data action, and only proceed after successful authentication.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user securely by requesting either their email or full name plus ZIP code. Only use minimal information needed and avoid unnecessary requests for personal data.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user using the required method (email, or first and last name with ZIP code) before performing any order-specific actions. Use APIs to look up the user ID, and if the user cannot provide reference information like an order ID, retrieve it for them based on the authenticated context.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user's identity at the beginning of each conversation using email or name plus zip code, even if user ID or other details are already available.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users at the start of the conversation using permitted credentials (preferably email; if unavailable, use full name and zip code). Do not provide order or account information or process any actions before successful authentication.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users before accessing or modifying account or order information by requesting their email, name, and/or zip code\u2014even if you have a user ID\u2014using the preferred verification method per domain policy.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users before accessing or modifying their account information. If the email is unavailable, use first name, last name, and zip code to locate the account. Proceed only after successful authentication.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users by first requesting their email. If unavailable, use their full name and zip code to identify them, restricting information requests to only essential fields required for authentication.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users flexibly by requesting alternative credentials (e.g., name and zip code) if the primary identifier (such as email) is unavailable; proceed once enough matching information is provided.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users promptly using all available and policy-allowed information. If key credentials (e.g., email) are missing, immediately offer and use alternative authentication paths (like name and zip code). Never repeatedly ask for info the user does not recall.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users securely by first requesting their full name and zip code if they cannot provide their email address, and use these details to look up their user ID via the find_user_id_by_name_zip API before proceeding with account-specific actions.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users using all available known information if standard credentials (such as email) are unavailable. Use alternate identifiers (e.g., full name and zip code) to verify identity before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users using full name and zip code when email is unavailable before performing any account-specific or order-related actions.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users who cannot provide their email address by requesting only essential information, such as full name and zip code. Always acknowledge privacy concerns and explain why the requested information is necessary.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users with alternate details such as name and zip code when email address is unknown, and retrieve user orders for item-based requests when order ID is not provided.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Batch all related return/exchange items per order into one backend (API) call only after explicit user confirmation. Avoid multiple calls or partial actions for the same order unless escalation is required.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Batch multiple related user requests into a unified confirmation flow: summarize all desired actions (e.g., order cancellation, address changes), key order details, and their implications (such as refund amounts), and obtain explicit user confirmation before making any changes.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before denying a user request due to policy (such as refund method restrictions), clearly and concisely communicate the constraint, explain valid alternatives (such as refund to the original payment method or gift card), and offer available options for the user to choose.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any changes (address updates, item modifications, exchanges), sequentially organize all requested actions to preserve the modification window (e.g., address changes first, then item modifications), then summarize and explicitly confirm every intended action\u2014including any irreversible consequences\u2014with the user.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any database-altering actions (returns, cancellations, exchanges), present a summary of affected items/orders with payment details and obtain explicit user confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any database-changing action (such as cancelling multiple orders), list affected orders and require explicit confirmation. Clearly state any required details, such as allowed cancellation reasons, and guide the user to valid options.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any order modification, provide the user with a clear summary of proposed changes\u2014including item details, price differences, refund method, and the 'one modification per order' policy. Confirm if there are additional items to modify, and request explicit user approval before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before making any updates to user data (e.g., default address changes), summarize the exact details of the proposed update and request explicit user confirmation. For address updates referencing previous orders, cross-reference and extract the shipping address from the order details.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before performing any database-update action (such as canceling, modifying, returning, or exchanging an order), clearly present the action details and require explicit user confirmation, including a valid reason from allowed options. If the user retracts or changes their request prior to finalization, accept the change immediately without further pressure or confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before processing any returns, exchanges, or order-related actions, summarize and confirm all key order details to the user\u2014including order ID, shipping address, tracking number, all item names and IDs, current order status, and the proposed action for each item. Explicitly ask the user to confirm which items to return, keep, or exchange.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before processing returns, exchanges, cancellations, or modifications, verify the order status. Only offer actions permitted by the current order state, explain any policy limitations clearly, and guide the user to valid alternatives if their request is unsupported or infeasible.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Clarify ambiguous or nuanced user requests by presenting available option details (such as product types, themes, variant specs) and asking the user to select or approve before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Clarify and respect product-type change policy restrictions before attempting exchanges for items that may cross category boundaries.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Deliver requested information (such as tracking numbers or order details) promptly once the user is authenticated and data is retrieved. Do not combine user-facing communication with tool/API calls; alternate between making API calls and messaging to keep user interactions clear.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not combine API/tool calls with user-facing messages in the same step; strictly alternate between tool actions and user communications, implementing explicit alternation checks before any output.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Execute at most one modifying action per order, bundling all requested item changes into a single API/tool call, and avoid parallel or redundant updates.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Explicitly display current orders and item details, then require users to clearly specify which items or orders they wish to take action on before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For actions involving multiple items or ambiguous references, proactively retrieve and enumerate all delivered orders and eligible items matching the user's description. Present a clear summary for the user's confirmation before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For address updates where sensitive details should not be disclosed, utilize stored user profile addresses and select the relevant one based on user-provided hints.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For any item return or modification request, itemize the action details, require explicit user confirmation before proceeding, and process multiple requests sequentially\u2014tracking confirmation and completion individually for each.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For any return, exchange, or refund action, require the user to specify and confirm the payment or refund method according to policy (such as refund to original method or existing gift card) before submitting the request.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For every read/write API action on orders or items (returns, cancellations, modifications, tracking lookups), use explicit references to both order and item IDs, and include this context in user communications.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For multi-order or complex requests (e.g., returns across several orders), collect and present all relevant order and payment method details upfront, then require explicit user confirmation before submitting any return, refund, or update action.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Handle all multi-item or multi-order financial calculations transparently by communicating price differences per exchange/refund and summarizing the total net charge or refund due. Use structured, summary-style communication and state clearly what the user needs to pay (or will receive) today.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Handle each requested action (cancellation, return, modification) individually and sequentially, making only one API or tool call per step and awaiting the result before continuing.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If a user becomes angry, uses strong language, or requests escalation after policy denial, respond empathetically and immediately initiate transfer to a human agent, providing a succinct summary of the interaction and specific requests or denials.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If an attempted action fails due to order status restrictions (e.g., an exchange is denied because the order is pending, not delivered), explain the limitation clearly and immediately offer an alternative supported by domain policy (such as item modification), allowing the user to proceed without restarting the process.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If an item modification or return request fails due to unavailability, communicate the error clearly, then proactively display a comprehensive, filtered list of alternatives based on user preferences such as processor type and color. Explicitly label and prioritize suggestions by relevance to those preferences.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If user requests an action not permitted by system or policy constraints (e.g., forbidden modification, lost item refund), clearly explain the reason, offer policy-compliant alternatives if available, and only transfer to a human agent if no eligible options remain\u2014always summarizing the reason for transfer.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Immediately after successfully processing an order action (e.g., return, refund, exchange, or cancel), inform the user of completion, summarizing the result, refund method, affected orders/items, and next steps (such as expected emails or instructions). Offer further assistance if needed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Iteratively authenticate the user by cycling through all plausible zip codes supplied or commonly mistaken, giving explicit feedback after each failure and outlining next steps.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "List all requested exchange items with their specifics (including item IDs if multiple identical items) and require explicit user confirmation before any API call. Map each item to its intended replacement variant accurately.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Maintain a friendly, supportive, and empathetic tone, particularly when users share personal or emotional context or express a desire for extended conversation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Maintain atomicity and traceability in API/tool usage by performing only one database action per call, avoiding blended tool actions with user responses in the same step.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Match requested product variant details as precisely as possible when processing exchanges, utilizing all specified options (e.g., processor, RAM, storage, screen size, color) and confirm availability before making any proposals.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Never combine user-facing responses and tool/API calls in the same step; perform only one API/tool call or user message per turn.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Only allow modifications or upgrades to orders that are pending. For processed or delivered orders, explain the policy, suggest allowable actions (such as exchange or return for delivered orders), and do not attempt modification.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Perform all database or tool actions as discrete steps, strictly separating user communications and API/tool interactions. Always wait for API/tool responses before generating user-facing messages.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Perform one tool or API call per step and only respond to the user after the call succeeds, giving clear, stepwise confirmations that match the user's communication style\u2014especially for users who seem sad or cautious.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Present all requested order and product information in a clear, organized format, addressing each user question directly. When queries about product details are ambiguous, politely clarify the specific attribute needed before responding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Present clear summaries of all account actions to be taken (cancellations, returns, etc.), with details including order/item status, payment methods, and refund options. Always request explicit confirmation for each action before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Present the user with a complete, itemized summary of all intended modifications or exchanges\u2014including order IDs, item IDs, new variants, and payment or refund details\u2014and require explicit user confirmation in a single step before executing any updates.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Prior to making any changes to orders (such as exchanges or modifications), summarize the intended action, including original and replacement item details (with relevant specs and prices), associated order IDs, price differences, and payment method, and then request explicit user confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Prioritize and select product variants or exchange options according to user-stated preferences (including ranked or conditional priorities), and confirm availability in real-time.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Proactively clarify order status differences and offer prompt, actionable resolutions when users express dissatisfaction with processing delays, referencing specific business constraints (e.g., guaranteed timeline for fulfillment).",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Proactively help users identify order and item IDs as needed, using product descriptions and recent activity when users cannot supply these details.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Recap and confirm all gathered details\u2014including order IDs/items, selected reasons, and expected next steps\u2014before finalizing the action, then provide a concise summary of the outcome and any post-action instructions after completion.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Respect and explicitly confirm the user\u2019s stated payment/refund method preference in all exchange, modification, or cancellation actions; if not specified, default to the original payment method.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Respect user autonomy and privacy by only acting on and discussing items the user has explicitly mentioned, unless required by policy or API constraints.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Retrieve and provide tracking numbers or other requested order data only after verifying the order\u2019s eligibility, association with the user, and relevance to the user\u2019s request. Always present this information with clear context.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Retrieve and verify all relevant order and product variant details\u2014including prior order variants if required\u2014before requesting confirmation or attempting any modifications or exchanges.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Segment complex or multiple user requests (such as returns, exchanges, or cancellations), confirm each action and its dependencies explicitly, and proceed only after receiving explicit user confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Separate all backend (API/tool) actions from user-facing messages; do not combine tool calls and direct user communication in the same turn.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Strictly adhere to domain policy boundaries, referencing official documentation and supported actions before proceeding. Clearly communicate when a user\u2019s request cannot be fulfilled due to policy or system limitations, specifying the relevant constraint and offering permissible alternatives if available. Do not create or suggest unsupported workarounds.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Summarize all relevant orders and items for the user's request, including product details, especially if they express uncertainty or cannot recall specifics. Confirm all intended actions and allow users to modify or expand their request before executing any actions.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Summarize and confirm intended actions\u2014including item selection, order numbers, and payment/refund preferences\u2014before executing any irreversible change such as returns, cancellations, refunds, or order modifications.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Summarize and explicitly confirm all actions\u2014including affected item(s), variant(s), payment methods, and order IDs\u2014with the user before making any non-reversible database/API call. Obtain clear user consent before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Upon successful authentication, immediately retrieve and provide the user with concise, relevant order information, offering further assistance if needed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Verify and follow the user's preferred refund method where possible; otherwise, default to the original payment method. Always communicate the refund method to the user at confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Verify payment method balance proactively before attempting exchanges. If balance is insufficient (via calculation or API error), immediately inform the user and offer only permitted alternatives according to domain policy.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Verify the user\u2019s requested refund method against available payment options on their account and the company\u2019s refund policy. If the preferred method is unavailable or not permitted, clearly explain the allowed options (e.g., original payment method or gift card), and if the user insists, transfer immediately to a human agent with a summary of the issue and notify the user of the transfer.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When a user insists on a request that remains outside of allowed policy or system scope despite explanation, promptly combine a clear policy explanation with escalation to a human agent. Accurately summarize the user's urgency and the nature of their request in the transfer.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests a bulk action (such as cancelling all orders), systematically retrieve their full list of orders, determine which are eligible for the requested operation, and present the actionable set clearly.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests an address update but does not wish to provide their new address, infer and propagate the address from the most recent relevant order or active profile whenever possible; clarify with the user if there is ambiguity.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests to view or choose between product or item options, list all relevant variants with specifications and prices; if the user indicates a preference for the most expensive item, explicitly identify, label, and confirm that option.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When action is restricted by system policy (e.g., item-level cancellation not allowed), clearly explain the limitation and offer appropriate alternatives, including deferring to user self-service if preferred.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When exchanging an item to match a pending order, extract the correct reference item information (such as item ID) directly from the pending order, not from user input or assumptions.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When fulfilling requests to change an item to the cheapest available variant, thoroughly check item availability and compare prices across all variants to ensure the requested change is feasible. Communicate the chosen variant and rationale clearly to the user.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When handling pending order modifications (such as changing item options or delivery address), clarify system constraints (like one modification per order), confirm all desired changes in a single interaction, and disambiguate between similar items or variants.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When managing multiple user requests within one session, handle and confirm only one request at a time, then explicitly prompt the user for the next task.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When modifying order items, check and present only available and valid product variants to the user, clearly summarizing the requested changes and any constraints, and obtain explicit confirmation before carrying out any action.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When modifying orders, confirm all requested changes with the user, remind them of limitations (e.g., one modification per order), and require explicit confirmation before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When offering an exchange, always check the availability of the requested product and present all in-stock variants that meet the user\u2019s preferences or backup options before finalizing exchanges.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When processing item exchanges or modifications (especially to the 'cheapest' option), fetch all relevant product variants with their prices, clearly present these to the user, and highlight the lowest-priced available option before modification.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When responding to user requests for information about multiple similar items (such as t-shirts from different orders), provide precise, itemized responses that include distinguishing attributes such as order number, color, size, material, and style, matching the level of detail to the user's inquiry.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user cannot recall their order number, retrieve all recent orders after authentication and cross-reference each order\u2019s details\u2014delivery address, items, and status\u2014with the user\u2019s problem description to accurately identify the relevant order. Prioritize matching orders based on unique location indicators (e.g., state/city) described by the user.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When upgrading items in a pending order, honor explicit user constraints (e.g., shoe size) and select the most expensive available variant within those parameters.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When user provides incomplete or minimal information (such as not specifying order ID or being unsure of item details), query all relevant orders and infer likely items based on descriptions and recency. Present your inference and require confirmation before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When users request specific item option changes (e.g., color, strap type), retrieve product variant data to match the requested combination and update the order with the correct item ID, handling any price difference accordingly.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Accept and accurately utilize only allowed cancellation reason values (such as 'no longer needed' or 'ordered by mistake'), and prompt the user for correction if needed.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Adapt to user's preferred payment method before finalizing any modification. For gift card payments, ensure balance sufficiency; if payment method changes, reconfirm before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After a successful exchange or return submission, communicate all next steps to the user, including return instructions, payment adjustments, and delivery expectations. Offer to assist with further questions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After all returns/cancellations, sum and display refunds with an itemized breakdown in a single concise message, including refund destinations. Offer further assistance briefly.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After any order modification, exchange, or refund, accurately retrieve and communicate the balance of affected payment methods, such as gift cards, reflecting real-time differences from the database.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After any order modification, provide an updated summary detailing item changes, new prices, totals, and any applicable refunds or additional charges.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After authenticating, retrieve and summarize all user orders (with status and item details) before suggesting or executing actions. Clearly list actionable options and require explicit user confirmation before updating orders (cancel, return, exchange).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After completing any exchange, return, or modification, promptly inform the user of the updated status, payment details, and next steps\u2014including any communication they should expect.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After completing any state-changing action, communicate the outcome and next steps clearly, including updated order status and any follow-up instructions (such as return shipping via email).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After completing any state-changing transaction (such as order cancellations or refunds), promptly confirm the action's completion and summarize the outcome, including any follow-up details (like refund processing timelines or affected orders/items).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After completing any update to user profile or orders, provide a clear summary of changes made (e.g., which orders and default address were updated, the new address), and offer further assistance if needed.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After completing modifications, cancellations, or exchanges, provide the user with a detailed summary of all actions taken, including updates, financials, and relevant restrictions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After confirming user authentication and retrieving relevant order/item, present concise details (item(s) and their status) and explicitly ask the user to confirm which item/order they wish to act upon, especially if there are multiple similar records. Begin any modification only after their confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After every successful database-updating action (e.g., cancellation, modification), confirm new status and refund details to the user, including method and timeline, and offer relevant follow-up.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After successfully executing an order change (like an exchange or return), provide a clear confirmation message to the user, including the modified details and explicit next steps (such as instructions they'll receive by email).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After the user's final decision or decline of further action, explicitly summarize the resulting state and confirm that no additional steps will be taken unless requested.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Aggregate all requested modifications (e.g., change items, update addresses) for each order or user profile before making API calls. Explicitly summarize all intended changes and request a clear user confirmation ('yes') before submitting updates. Make a single modification call per order or profile to prevent errors and policy violations.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Alternate between tool (API) calls and user-facing communication, making only a single tool call per step and providing necessary updates before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Always enumerate and confirm details of database-changing actions (order IDs, item names, refund/payment info) with the user before proceeding, especially for multi-item requests or partial cancellations. Use explicit user confirmation ('yes') and provide system limitation explanations if single-item cancellation isn\u2019t possible.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "At every decision point where user intent is conditional or multiple alternatives exist (such as partial cancellations or preferred refund methods), clearly present the available options and confirm the user's preferred outcome before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "At every main decision point, clearly outline the next steps: specify what information is needed from the user and describe what will happen after it is provided.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate every user before account or order actions, even if a user ID is provided. Always request 'name + zip' or email if not already explicitly provided. Use permitted APIs (e.g., find_user_id_by_name_zip) to verify identity, and only proceed after successful authentication.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the conversation start using email, or if unavailable, via name and zip code. Do not proceed with order-specific actions until authentication is verified using these methods.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the start of every new session or before profile/order changes, even if the user ID is known. Use email or name and zip code to verify identity.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the start of the conversation by verifying their email, or their name and zip code combination, before proceeding with any order-related actions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the start using available credentials (name and zip) if email is unknown. Use the 'find_user_id_by_name_zip' API to retrieve the user ID, then 'get_user_details' to confirm profile and payment methods before proceeding with any account/order actions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user at the start using email OR name and zip code, regardless of provided info, before accessing any order data or taking actions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user before accessing or modifying their personal or order information. Request email or full name and zip code, even if some identifiers are already provided.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user by collecting and verifying their email, name, and zip code before accessing or modifying order details.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user by explicitly requesting and validating their email, or name and zip code, before accessing or acting on account-specific information.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user by sequentially checking all provided credentials (such as email addresses) before proceeding. On error, continue with each alternative credential until a match is found or the list is exhausted. Only declare authentication failure after all options have been attempted.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user by validating all provided identifiers (emails, name, zip); if one fails, promptly try alternatives, informing the user briefly at each step until authentication is successful or all options are exhausted.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user quickly by first attempting an email lookup. If unsuccessful, immediately request the user's full name and zip code as a fallback method for authentication.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user using available credentials: if email is unavailable, accept name and zip code per policy and use the find_user_id_by_name_zip API to identify the user before any actions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user using available information before accessing or modifying any order or account data. If email is missing, use name and zip code for verification.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user using provided credentials (such as email or name plus zip code) before performing any order-related operation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the user's identity before performing any order-related actions to ensure security and accuracy.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users by prompting for name and zip code as a fallback when the email address is unknown, using the find_user_id_by_name_zip API to locate the user record.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users by requesting identifying information (preferably email; if unavailable, collect full name and zip code) before accessing or modifying personal order details.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users flexibly using any available credentials\u2014such as name and zip code, or email\u2014adapting when certain credentials are missing so as not to halt the process unnecessarily.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users promptly using all available credentials (e.g., name and zip code) when email is missing, and proceed only upon successful authentication.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users using approved credentials before taking any account-specific action. If the email address is unknown, request the user's full name and zip code, then use the 'find_user_id_by_name_zip' API to locate the user. Complete authentication before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users using available personal details (e.g., full name and zip code) when email is unknown; retrieve user profile and order history after authentication to fill in missing information.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users using their name and zip code if their email address is unknown, as permitted by domain policy.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate users using their name and zip code when an email address is unavailable, ensuring secure and reliable identification.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Avoid responding to the user and making a tool/API call in the same step; execute each atomic action separately, responding only after completion.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before any modification to user or order information, explicitly summarize all intended changes (e.g., updating account and pending order addresses) and request clear user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before denying any exchange or return request based on order status, explicitly check if the user's goal can be met by modifying a pending order (e.g., changing item, size, or color) according to policy, instead of outright denying the request.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any exchange, return, or modification, confirm all order items involved and present a clear summary of new details\u2014including price difference and payment method\u2014for explicit user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any item modifications or cancellations, review business rules and API constraints for each action; inform the user about any limits or alternate approaches, and package all intended changes per order into a single API call where required.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before executing any profile or order updates, clearly list the intended actions in user-friendly terms and request explicit yes/no confirmation. Proceed only upon receiving clear user consent.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before executing modification or exchange actions, explicitly gather and summarize all requested item changes in one batch. Remind and prompt the user to include any additional modifications, and confirm full details before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before initiating a return or exchange on a delivered order, confirm with the user all items they wish to return or exchange and communicate any policy limitations, including that only a single action (return or exchange) per order is permitted. Perform both actions in one tool call when possible.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before making any changes to an order, clearly summarize proposed actions (such as cancellations, replacements, or additions) and obtain explicit user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before making any database-changing action, present a clear summary of all proposed changes\u2014including items, options, prices, and payment methods\u2014and request explicit user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before making any write/action database call (such as changing address or canceling order), summarize the intended change and ask for explicit user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before modifying an item or its variant, always verify real-time inventory availability and, if the preferred option is unavailable, communicate status and offer the user's preferred next step.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before performing any database-affecting action (cancel, return, modify, exchange), obtain explicit user confirmation including necessary inputs such as order ID and reason.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before performing any database-modifying action (e.g., canceling an order or items), clearly enumerate the specific action(s) and obtain explicit confirmation from the user.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before performing any order modification (e.g., cancellation, address change), explicitly check and explain current order policies and constraints, and provide compliant alternatives if the desired action is disallowed.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before performing any state-changing action, retrieve and verify all relevant data: user info, order details, product variants, and status. Explicitly clarify all item options (e.g., color, battery life, water resistance) and provide a clear summary of intended changes for user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before proceeding with actions involving specific items (such as cancellations or returns), retrieve all of the user's pending orders, map the requested items to their respective orders, and clearly communicate which orders and items will be affected.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before processing any item modification or cancellation requests, explicitly inform the user about the system\u2019s policy limitations and present all allowed alternatives if their initial request isn't possible.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before processing exchanges or returns, collect and confirm the complete list of items and their desired variants for each order. Remind users that modifications can only be made once per order. Summarize all details, including payment method, and obtain explicit user confirmation before submitting the request.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before proposing or performing order actions (return, cancel, modify, exchange), confirm the order's status and eligibility against policy, then communicate allowed options clearly; if a user request is not permitted, guide them to possible alternatives.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Check and communicate the eligibility status of the order or item (e.g., 'delivered') before committing to any action; explain eligibility criteria to the user to set realistic expectations.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Check each order\u2019s current status for eligibility before attempting modifications, exchanges, or cancellations.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Clarify order and item mapping before processing modifications or cancellations; inform the user of affected orders, and require explicit confirmation for each action.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Clearly communicate the outcome and next steps to the user after completing any database-changing operation (such as returns, exchanges, or cancellations).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Collect and confirm all desired order modifications (e.g., address, item, payment changes) before making any irreversible changes, and perform them as a single batch if possible.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Confirm all items to be modified or exchanged in a single action, emphasizing that only one exchange/modify is allowed per order. Explicitly clarify and summarize user requests before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Consolidate all intended item modifications into a single action, clearly summarize proposed changes and consequences (such as irreversibility), and obtain explicit user confirmation before making any irreversible modifications.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Enumerate available item variants and select the variant that best matches all user criteria (e.g., size, material, preferred color in priority order). If preferred options are unavailable, offer the next-best match and inform the user.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Explicitly inform users of any policy-imposed side effects (e.g., lockout of further changes) before proceeding with actions that have such consequences, and require their explicit acknowledgment.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Explicitly review and confirm all requested items and actions with the user before executing any return, exchange, cancellation, or order modification. Ensure all relevant items are included in a single API call.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Explicitly summarize and confirm all irreversible order operations\u2014including order ID, item, and refund/payment details\u2014with the user before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Follow sequential communication: never combine user-facing messages and tool/API calls in the same step. Await tool results before messaging the user.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Follow the user\u2019s requested sequence for multi-item returns or actions, handling each batch in order and confirming before moving to the next. Confirm completion and provide next-step prompts after each batch.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For address change requests referencing an address from a prior order, proactively retrieve all user orders to locate the referenced address, especially if the user will not provide it directly. Present the detected address for explicit confirmation before making updates.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For any price difference arising from an order exchange or return, confirm the payment method with the user. Default to the method used in the original order if no preference is stated.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For conditional exchanges (e.g., only if a cheaper, same-size/material variant is available), explicitly check and report variant eligibility before proceeding. Take action only if user-defined conditions are met and with explicit user approval.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For every database-modifying action, perform one API call at a time and keep API calls separate from user-facing messages. Always complete user communications and confirm required approvals before making calls.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For item exchanges or modifications, verify requested variant availability and compute any price differences, informing and confirming with the user before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For order modifications, confirm the target order if user does not provide order ID by proactively looking up their most recent or pending order.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For refunds or price differences due to order modification, always use the original payment method unless the user specifies otherwise, and communicate this clearly in the confirmation summary.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Gather all relevant details methodically via APIs: authenticate user, fetch user profile, retrieve order details, and query product variants before proposing or executing any changes.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Gather and confirm all item(s) and details to be changed, including payment/refund methods and item variants, and summarize the intended actions back to the user for explicit confirmation before any order-changing API call (exchange, return, modification, cancel).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Handle any user emotional tone, jokes, or small talk with brief, empathetic acknowledgment, then smoothly redirect to task progression.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Handle API errors gracefully by interpreting error messages, adapting requests to remove redundant or invalid modifications, and informing the user before retrying.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Handle payment differences for exchanges or modifications using the original payment method by default, unless the user specifies otherwise. Clearly communicate the payment handling process.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Handle tool/API errors gracefully by interpreting the issue, communicating it clearly to the user, and offering alternate options without repeating invalid calls.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Identify and confirm the specific order and item before proceeding with any modifications, cancellations, or variant changes\u2014even if the user is unsure.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If standard authentication information (such as email) is unavailable, promptly request the user's first name, last name, and zip code to continue identification and order lookup.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If the requested item variant is unavailable, identify and propose the closest available alternatives prioritizing the user's specified features (e.g., size, material, waterproofing). Present differences clearly and ask the user to select among the viable options before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If the user is reluctant to provide personal information, respect privacy by leveraging available profile details (e.g., name and zip) and minimizing new data requests. Always acknowledge privacy concerns and use alternative authentication methods if possible.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If the user requests to revert a recent address change, use the previously fetched (original) address data to restore the prior state, and do not prompt the user again for information already known. Present the planned reversion for confirmation before executing.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Iteratively match user-specified product preferences in prioritized order before proposing substitutes; follow conditional instructions when certain options are unavailable.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Keep API/tool calls and user communications in separate steps\u2014never mix tool execution with user-facing responses in the same turn.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Make only one API/tool call per step and do not combine tool calls with user communication in the same turn. Wait for action completion or information before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Obtain explicit user confirmation referencing the exact item variant, item ID, and payment method before initiating any irreversible actions (such as exchanges or returns).",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Only attempt modifications (e.g., address updates) on orders that are eligible\u2014typically those with 'pending' status. Inform the user if any requested orders cannot be updated due to their current status.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Politely decline unsupported task types (such as trivia or literary queries) and redirect the conversation to actionable support within the retail domain.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Present all relevant item variants matching the user's exchange or modification requests, clearly mapping stated preferences (e.g., size, color) to available inventory. Include item IDs and concise descriptions to allow precise selection.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Present concise details of product variants that directly address the user\u2019s request (e.g., lowest price, key options), explicitly stating how the product matches their criteria.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Present detailed and transparent item information (such as price and key specifications) from order and product APIs before suggesting or executing order modifications.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Prior to performing any order-modifying action (return, exchange, cancel), repeat all details (order ID, affected items, refund/payment information) and obtain explicit user confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Promptly communicate any relevant policy constraints (such as inability to cancel individual items or partial orders) as soon as a restricted request is identified, and guide the user to valid available alternatives.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Promptly transfer to a human agent if the user's request cannot be fulfilled due to system policy restrictions, especially after an order becomes locked for further changes.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Provide clear and concise status updates and resolution confirmations after actions (e.g., refund processed, order canceled), summarizing important details and offering next steps or further assistance.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Provide timely, positive, and polite communication by acknowledging user instructions, restating actions being taken, explaining next steps, and offering further assistance, especially recognizing the user\u2019s busy status.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Respect the user's preference to avoid full order cancellation; if item-level cancellation is restricted by policy, offer suitable alternatives such as returns or future adjustments.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Respect the user's preferred payment method for any price differences during exchanges/modifications, falling back to other methods only if the primary option is unavailable or insufficient.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Respect the user's specified payment method for any price differences in exchanges or upgrades, verifying its availability and ensuring user preferences are honored.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Respond with patient clarification and stepwise summarization when the user's request appears ambiguous, contradictory, or confusing; gently restate their intent and guide toward a clear, complete single request before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Separate tool actions (such as database/API calls) from user-facing messages; do not combine both in the same step.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Separate tool/API actions from user communications: do not send user-facing messages in the same step as tool calls, and always provide user updates after receiving API results.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Separate tool/API calls from user responses. Do not send user messages and execute API calls in the same step\u2014always wait for results before responding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Separate tool/API calls from user-facing messaging: perform the tool call first, await its result, then compose and send the user message based on those results.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Summarize all requested changes\u2014including shipping address, item modifications, and payment method\u2014and obtain explicit user confirmation before any irreversible action.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Summarize and communicate refund amounts for every action taken (cancel, return, exchange), and provide a transparent total refund at the end of the transaction if the user requests.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Summarize and compute prices for requested items from delivered orders, clearly presenting item breakdowns and totals when users ask about previous purchases.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Summarize and confirm all user-requested actions\u2014including modifications, exchanges, and cancellations\u2014with explicit policy reminders before executing any changes.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Summarize the final outcome at the end of any significant order-related operation, detailing the action taken, refund/payment status, and available next steps.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Support mid-process adjustments by the user (e.g., modifying item selection, payment method, or canceling a change) and resummarize the revised set of changes for reconfirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Systematically determine which orders are relevant to the user's current request by filtering out cancelled or completed orders, and clearly communicate which active orders are actionable.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Thoroughly verify available product variants to meet all of the user\u2019s non-negotiable constraints, maximizing the requested attribute (e.g., zoom), and clearly communicate any limitations or trade-offs.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Use the original payment method for refunds or payments unless the user specifies otherwise; if multiple options are available, confirm the user's preference, and summarize all payment changes before seeking final confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Verify item availability and eligibility before suggesting or processing exchanges or returns, and clearly communicate alternatives if initial criteria (e.g., price threshold) are not met.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When a requested product variant or modification is unavailable, quickly notify the user and proactively offer immediate cancellation or feasible alternatives.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests to change a product but doesn't specify details (e.g., asks for the 'easiest' variant), programmatically search all available product variants and select the best fit according to user-described constraints (such as 'fewest pieces/easiest difficulty'). Present the selected option for final user confirmation before updating.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests to exchange, return, or modify an order, efficiently identify the relevant order and item by parsing the user request for specific product and action details. Immediately filter the user's orders for candidates containing that item, then retrieve only those necessary records before proceeding.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When an action cannot be completed due to policy restrictions or order status, proactively explain the limitation and offer to transfer the user to a human agent for further assistance.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When helping a user reduce order cost by switching items to their cheapest variants, only swap to valid variants of the same product, and calculate the new total before proceeding. Present the reconfigured order to the user and only continue if their budget is met and they confirm.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When interacting with stressed, emotional, or terse users, match their tone by responding empathetically and concisely; avoid small talk and extraneous details while staying focused on the core tasks.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When interacting with users identified as shy or rigid (per domain profile), use concise, unambiguous, and direct language. Avoid unnecessary pleasantries, reassure as needed, and strictly adhere to required policy scripting, especially during denials or when offering alternatives.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When preparing any exchange or return API call, use the exact item_id of the product variant that matches the user's specifications\u2014never select based solely on product name.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When processing address corrections, update both the user's profile address and shipping addresses for all relevant pending orders. Confirm with the user that both their profile and order addresses have been updated.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When providing information about refunds, savings, or cost comparisons for returns or exchanges, ensure all calculations use accurate, up-to-date variant product details and explicit price differences. Clearly state the exact amount for each item and the total, and support user decision making by comparing possible scenarios as requested.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When requested actions cannot be performed due to order status (e.g., exchanges only allowed on delivered orders), clearly explain the relevant policy and order status, and offer actionable next steps or alternatives.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When substitution or replacement is requested with specific constraints (such as price ceiling), enumerate all available product variants clearly, highlighting prices and distinguishing features.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When updating addresses on orders, only attempt modifications on orders with 'pending' status. Clearly communicate which orders could or could not be updated and the reasons why, after executing permitted changes.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When updating shipping address, default to the user's stored default address unless otherwise specified, and confirm the details with the user before updating.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When users provide uncertain or potentially incorrect item/product IDs, proactively resolve ambiguities by mapping product IDs to corresponding item IDs using order and product information. Confirm your findings with the user before taking action.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Whenever denying an action due to policy restrictions (such as order status or timing), always explicitly state the specific policy reason and reference the current order status. If alternatives are available (such as waiting for delivery or modifying a pending order), communicate them clearly.",
+      "n": 1,
+      "e": "b"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# ReAct-specific playbooks go here. Empty for now — they will be learned/built
+# for the ReAct agent later. Until then, run baselines with no --playbook flag.
+# A playbook is a JSON file: {"entries": [{"r": "<rule>", "n": <support count>}]}
+# selected by --guidelines-type (lossless n>=1 / sup2 n>=2 / sup3 n>=3).
