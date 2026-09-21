@@ -1,7 +1,8 @@
 # Simulation results / run artifacts (written by eval_tau2.py)
 # Ignore everything under runs/ except the committed reference run.
 /runs/*
-!/runs/react_retail_base_lossless/
+!/runs/react_retail_base_lossless_gpt4.1/
+!/runs/react_airline_base_lossless_gpt5.5/
 
 # Log files
 /logs/
