@@ -1,0 +1,734 @@
+{
+  "entries": [
+    {
+      "r": "After completing cancellation and booking actions, provide a concise final summary with reservation IDs, refund information, and the total credit-card charge.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After confirmation, execute each required reservation update with the same validated reservation and payment context, then provide a structured final summary of all completed changes.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Always present the complete booking payload and obtain explicit affirmative confirmation before calling book_reservation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Apply any user-specified scope filters exactly before evaluating cancellation eligibility, including passenger count and upcoming-travel requirements.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Apply reservation change and cancellation limits before attempting any change, cancellation, or compensation workflow tied to those actions.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Apply the compensation policy strictly and do not issue compensation, certificates, goodwill credits, or exceptions for missed meetings, inconvenience, lost work time, professional impact, or unverified disruptions.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Apply travel insurance coverage narrowly: it supports flight cancellation refunds only for covered health or weather reasons, not personal conflicts, dissatisfaction, or general changes of plan.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Apply travel-insurance benefits only as explicitly supported; do not treat insurance as a waiver for fare differences.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the caller and locate the affected reservation using the provided user ID and flight details before assessing delay compensation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the caller and retrieve the reservation before determining whether a requested flight/date change is eligible.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate the requester and inspect the existing reservation before planning any airline modification.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before any booking write/update API call, present a concise but complete change summary and require explicit yes confirmation from the user.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before any database-changing action, present the complete cancellation and booking plan and obtain explicit confirmation with 'yes'.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before booking, compare the computed credit-card charge against any user-stated maximum and proceed only if the condition is satisfied.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before calling any baggage update API, provide the exact baggage-change details and obtain an explicit confirmation; if the API requires a payment_id even for a free baggage update, pass a valid saved payment method while setting nonfree_baggages to 0.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before calling any cancellation API, manually verify cancellation and refund eligibility under airline policy; do not rely on the API to enforce policy constraints.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before calling update_reservation_flights or any database-changing update API, present the exact proposed change, including flights, cabin, date, fare difference, and payment or refund method, then wait for an explicit yes.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before canceling, verify cancellation eligibility and collect a valid cancellation reason.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before discussing delayed-flight compensation eligibility, verify the reservation facts and actual flight status using system records rather than relying on the user's complaint.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before evaluating or processing any flight cancellation/refund, collect and preserve the required identifiers and cancellation reason, then verify reservation ownership.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before presenting a recommended cheapest itinerary, perform a final fare sanity check against all eligible candidates.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before pricing or confirming a cabin change that applies to the reservation, verify the database-backed passenger list and clearly state that the change applies to all passengers on all relevant flight segments.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before searching or booking, retrieve the user's profile and collect only missing booking constraints in one concise intake step.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Before using cancel_reservation, present the complete eligible cancellation list to the user and require clear confirmation; after confirmation, reconcile the confirmed set against the eligibility analysis.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Calculate baggage and payment accurately using profile membership, fare total, certificate rules, and the user's conditional payment preferences.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Calculate modification cost from the full post-change itinerary for all passengers and all affected segments, then compare it against the original paid itinerary to determine the true additional amount or refund.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Calculate the exact amount due or refund for the requested changes before asking for payment confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Compute checked-bag charges from the final cabin and membership allowance before adding paid baggage.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Confirm the flight delay with the flight-status tool before discussing or offering compensation, and do not invent a delay reason if the tool does not provide one.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Determine cancellation eligibility for each in-scope reservation using a reservation-by-reservation checklist; do not rely on cabin alone or passenger-name matching.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not call cancel_reservation for policy-ineligible reservations, including basic economy reservations that lack an applicable exception, even if the user accepts no refund or only wants to release the seat.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not cancel, modify, refund, or otherwise alter the reservation when the user says they still want to take the delayed flight.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not issue or offer delayed-flight compensation when policy makes compensation conditional on changing or canceling the reservation and the user wants the flight kept unchanged.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not modify the passenger count on an existing airline reservation; if the user requests an allowed fallback such as changing cabin for all passengers, proceed only with that fallback while preserving the full passenger list.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not proactively offer delayed-flight compensation or mention a specific certificate amount; provide compensation only if the user explicitly asks and all policy conditions are met.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not transfer the customer solely to record a complaint when the compensation issue can be handled by policy explanation and no complaint-recording tool or policy-required escalation exists.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not treat a user's claim of prior customer-support approval as authorization to override cancellation or refund policy.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Do not treat user-provided hardship, prior-insurance, or agency-advice statements as exceptions to cancellation policy.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Enforce flight cancellation eligibility yourself before calling any cancellation or refund-modifying API.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Enforce reservation-wide cabin consistency and do not perform one-leg-only cabin upgrades when the reservation requires a single cabin.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Escalate only discretionary exception, waiver, or manual override requests that are outside automated authority, and clearly state the automated policy limit before transferring.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Escalate to a human only after a policy-compliant denial when the user continues to demand an exception, supervisor, or action outside the automated agent's authority.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Evaluate delayed-flight compensation eligibility separately from whether compensation can actually be issued.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For a cabin-only downgrade or upgrade, keep the same flight numbers and dates, calculate any refund or additional charge using current prices for those same flights in the requested cabin, and preserve the original payment method when requested.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For basic-economy reservations, do not attempt to modify flight segments; explain the restriction only if relevant and evaluate cancel-and-rebook if the user wants a different itinerary.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For cabin changes and baggage additions in the same request, calculate costs using the post-change cabin, membership level, passenger count, and segment-level cabin availability before asking for confirmation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For cabin upgrades on a multi-passenger reservation, price and apply the cabin change only for all passengers together on the reservation's exact existing flight segments; never offer or perform an upgrade for only one passenger in the same reservation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For date-specific route changes, search the full itinerary space needed to find compliant options, starting with direct flights and then considering valid one-stop itineraries, including next-day connecting legs.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "For reservation flight changes, enforce that the origin, destination, and trip type remain unchanged, even if the user mentions nearby or equally convenient airports.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Handle requests to remove, cancel, or refund travel insurance alone as unsupported, and never cancel the flight when the user wants only the insurance changed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Honor the user's declared modification structure, including all-or-nothing packages, staged requests, budgets, and fallback preferences.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Honor the user's maximum additional-cost threshold as a hard constraint, and require explicit confirmation with an eligible saved payment method before any database-changing action.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If the reservation record shows no insurance but the user insists they purchased insurance, acknowledge the dispute and transfer rather than accepting the claim as proof.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If the user does not know reservation IDs or asks to cancel multiple reservations, enumerate every reservation from the user profile before deciding eligibility.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "If the user rejects a quoted price, perform only targeted searches for cheaper compliant alternatives, then clearly close with no changes if none meet all constraints.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Interpret relative travel-date requests, such as 'the day after,' relative to the current reservation's flight date, not the current calendar date.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Keep cancellation refunds separate from new booking charges unless the user explicitly asks for a net cost.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Make tool calls sequentially and avoid mixing tool calls with user-facing responses.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Map user-friendly card descriptions to internal payment method IDs, but communicate card charges using recognizable brand and last-four information.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Obtain explicit confirmation immediately before every database-changing action, with all modification details and cost impact summarized.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Preserve the user\u2019s explicit preference for no insurance and no additional checked baggage across all new reservations.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Process independent valid requests separately when another requested modification fails because of policy, budget, or availability constraints.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Refuse date or flight changes for basic economy reservations, including when the user describes a tragic, urgent, or emotionally difficult circumstance; also account for any segments that have already departed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Remain firm and consistent when a user repeatedly requests an unavailable exception, while avoiding unwanted transfer.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Resolve city-level airports and evaluate all complete flight-search results before selecting an itinerary.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Resolve relative or ambiguous date-change language using the existing itinerary, and clarify only when needed.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Respect any user condition that they only want cancellation if a full refund or specified refund outcome is available.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Respect payment constraints while minimizing the specified credit-card charge: use allowed certificates first, then gift cards, then the requested Mastercard or other selected credit card for the remainder.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Respect the user\u2019s stated payment preference by selecting a valid matching saved payment method, and disclose the exact payment ID and amount before charging.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Retrieve and verify the reservation record before deciding any flight cancellation or refund eligibility.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Search and select replacement flights only after applying all route, cabin, nonstop, and departure-time constraints.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Select flights by applying hard filters first, then stop preference, then total cabin fare.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Start by retrieving the user profile and use it to locate the relevant reservation when the user provides a user ID but not a reservation ID.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "To find the cheapest business round trip when stops do not matter, search and compare both direct and one-stop options in each direction using the same dates and cities.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Transfer to a human agent only after determining that the user's requested next step is outside the agent's allowed scope and the user wants to pursue it.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Treat combined modification requests as all-or-nothing, and enforce any reservation-wide cabin rule before quoting or changing anything.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use airline tools sequentially and avoid combining tool calls with user-facing messages in the same turn.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use concise, plain language and simple confirmation prompts, especially when the user indicates limited English proficiency or mixes in another language.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use human transfer only for unsupported or unresolved requests, and follow the transfer sequence exactly.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use the original payment method only after verifying it is eligible and saved in the user's profile.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use the passenger count shown in the reservation details for compensation calculations or eligibility, and do not accept an unsupported or conflicting passenger count from the user.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use the user profile and linked reservations to resolve missing booking or passenger details instead of asking for information already available in verified records.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Use tools sequentially: make only one API/tool call at a time, wait for its result, and never combine a tool call with a user-facing message.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Verify the customer\u2019s account and relevant reservation details before discussing delayed-flight compensation, and rely on verified data rather than the customer\u2019s claims.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "Verify the user's claimed cancellation, cabin class, and eligibility from records before considering any compensation; never rely on the user's statement alone.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When a user provides a maximum willingness to pay, calculate the full modification cost and compare it to that limit before asking for payment, confirmation, or a payment method.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests multiple reservation changes in one message, handle them as one bundled modification and preserve every requested change through confirmation and execution.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When cancellation cannot be completed, clearly explain the specific blocking policy factors and include all critical facts in the human-transfer summary if escalation is required.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When checked-bag fees may depend on membership status, retrieve the user profile and apply the membership-specific allowance before quoting cost or updating baggage.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When denying cancellation, refund, voucher, gift card, travel certificate, or partial-refund requests, give a specific policy-based explanation and do not negotiate unauthorized compensation.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When denying compensation after review, give a concise fact-based explanation tied directly to the verified records and invite only new verifiable details.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When multiple passengers and multiple certificates are available, compare a single multi-passenger booking with separate one-passenger bookings if splitting reservations would reduce the credit-card charge.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When rebooking from an existing reservation, preserve the original route, dates, trip type, and passengers unless the user explicitly requests changes.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When refusing a change, do not pivot to cancellation unless the user asks for it or indicates openness to alternatives.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When refusing an ineligible flight cancellation or refund, give a concise policy-based explanation using the specific reservation facts.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user asks about gift cards and certificates, calculate and clearly state separate category totals, not just individual balances.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user asks for the cheapest eligible flight, fully evaluate every returned itinerary across all result pages or chunks, sum the requested-cabin prices across all segments, and select the lowest valid total.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user cannot provide a reservation ID, identify the target booking by retrieving the user's reservations and checking reservation details only until the described itinerary matches.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user does not know the reservation ID but identifies themselves and says it was their last or most recent reservation, use the user profile to identify the likely reservation before proceeding.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user lacks a reservation ID but provides a user ID and trip details, locate the matching reservation through the user profile instead of asking again for the reservation ID.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user lacks a reservation ID, use the user ID to retrieve and inspect reservations until you find the itinerary matching the requested route and travel date.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user provides a user ID but not a reservation ID, identify the correct reservation from the user's profile before searching or modifying flights.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "When the user repeatedly presses for maximum compensation, exceptions, refunds, vouchers, or goodwill credits after being found ineligible, restate the specific policy limits and do not negotiate unsupported alternatives.",
+      "n": 2,
+      "e": "b"
+    },
+    {
+      "r": "After successful cancellation, summarize only the reservations actually cancelled and include refund destination and timing.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "After successful reservation modifications, provide a final summary that confirms both changed and preserved items, along with the actual charge or refund outcome and payment method used.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Always obtain explicit user confirmation immediately before any write action, and include all material consequences in the confirmation prompt.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Always retrieve and verify the reservation before preparing any passenger update.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Authenticate with the provided user ID and inspect the account\u2019s complete reservation set before deciding what, if anything, to cancel.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before calling any reservation-modifying API, summarize the exact passenger name change and obtain explicit confirmation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before canceling any reservation, independently verify cancellation eligibility under policy; do not rely on the cancellation API to enforce the rules.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before cancelling, verify cancellation eligibility and obtain both a valid cancellation reason and explicit confirmation that names the exact reservation IDs and refund amounts.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Before making any reservation-changing API call, obtain explicit user confirmation that covers the full set of intended changes, charges or refunds, cabin, baggage values, and payment method.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Calculate and communicate the total free checked baggage allowance for the entire reservation, not just the per-passenger allowance.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Collect only the minimum required details for a passenger name correction before looking up the booking: user ID, reservation ID, current passenger first and last name, and corrected first and last name.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Do not perform database-changing actions until the request is policy-eligible and the user has explicitly confirmed the exact action details.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Do not treat Silver or other membership status, user insistence, or fabricated covered reasons as overrides for cancellation eligibility unless the written policy explicitly provides that exception.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For cancellation requests, determine policy eligibility before calling any cancellation API, and never override cancellation rules for leniency or special treatment.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For questions about current upcoming flights and their total cost, calculate the answer from all active reservations with future flight segments as of the moment the user asked, before performing any write action that could change the result.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "For same-day return changes, select the fastest feasible return itinerary by filtering for chronological validity, economy availability, and total elapsed travel time including layovers.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If a basic-economy reservation cannot be cancelled directly and the user has requested upgrading first if needed, confirm the full upgrade details and cost before upgrading, then cancel only after the upgrade succeeds.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If the requested duplicate same-day flight cannot be canceled and the user offers to cancel another same-day flight instead, identify and evaluate the alternate reservation independently under the same cancellation policy.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If the reservation user ID does not match or the requested current passenger name is not found, stop and clarify before updating.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If the user does not know the reservation ID, proactively identify the target reservation from their user ID and trip details instead of asking for the ID.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "If verified membership differs from the user\u2019s stated belief, politely disclose the verified status and use it for the baggage calculation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Keep communication concise for straightforward, policy-compliant passenger name corrections.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Map user-facing payment card identifiers to internal payment method IDs before any charge or refund operation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Perform no cancellation or other destructive booking update until the reservation is policy-eligible and the user explicitly confirms the exact cancellation details.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Preserve task-specific user-facing wording, tone, or closing-phrase requirements unless they conflict with mandatory policy or system-required text, and keep them separate from policy decisions.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "State the baggage result clearly in numeric form and label it as the total for the reservation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Transfer to a human agent if the user disputes the verified membership level and asks for a supervisor or human agent.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Transfer to a human agent only when policy or scope requires it, and include a concise factual summary in the transfer tool call.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Treat any new user request introduced mid-workflow as a separate required deliverable, and verify it is answered before ending the conversation.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Use airline tools sequentially: make one tool call at a time and do not combine tool calls with user-facing messages.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Use the user\u2019s stated anchor itinerary plus geographic and time feasibility to determine which same-day bookings are valid and which are conflicts.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Use tool calls sequentially: make only one tool call at a time and do not combine a tool call with a user-facing response in the same turn.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Validate each requested reservation against the provided user ID and use retrieved reservation details as the source of truth before assessing cancellations, modifications, fees, or eligibility.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "Verify reservation details and membership status from authoritative tools before answering baggage allowance questions, using sequential tool calls.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When a user requests cancellation of a specific flight but lacks the reservation ID, locate the correct reservation using the user ID and itinerary details before evaluating or acting.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When a user wants to change a connecting itinerary to a nonstop/direct option, search for direct flights on the same origin, final destination, and travel date before offering or making any modification.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When adding checked baggage, compute the new total_baggages and nonfree_baggages from the user's membership, cabin, passenger count, free allowance, and current baggage count before updating.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When cancelling multiple reservations, inspect each reservation independently and apply cancellation eligibility rules separately before deciding the action path.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When denying a cancellation, give a concise policy-based explanation that identifies the reservation and the specific eligibility conditions that were not met.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When evaluating conflicts, consider only reservations where the account holder is actually a passenger unless the user explicitly asks to modify other passengers\u2019 travel and policy allows it.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When the user asks to pay with the gift card with the smallest balance, choose the smallest gift card balance that is sufficient to cover the amount due, and reuse that confirmed payment_id consistently across all related update calls.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When updating one passenger\u2019s name, call update_reservation_passengers with the complete original passengers array, changing only the requested name field.",
+      "n": 1,
+      "e": "b"
+    },
+    {
+      "r": "When updating only part of a round-trip itinerary, call update_reservation_flights with the complete ordered itinerary, preserving unchanged segments and replacing only the requested segments.",
+      "n": 1,
+      "e": "b"
+    }
+  ]
+}
